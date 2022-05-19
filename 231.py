@@ -35,6 +35,8 @@ class Solution:
         calculated = math.log(n, 2)
         float_detection = calculated % 1
         return float_detection < 1e-10
+    def alternateIsPowerOfTwo(self, n: int) -> bool:
+        return n.bit_count() == 1
 
 
 s = Solution()
@@ -48,4 +50,4 @@ tests = {
     536870912: True
 }
 
-print('\n'.join(f'{key}: {s.isPowerOfTwo(key)}| {tests[key]}' for key in tests))
+print('\n'.join(f'{key}: {s.alternateIsPowerOfTwo(key)}| {tests[key]}' for key in tests))
