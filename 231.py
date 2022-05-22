@@ -36,7 +36,7 @@ class Solution:
         float_detection = calculated % 1
         return float_detection < 1e-10
     def alternateIsPowerOfTwo(self, n: int) -> bool:
-        return n.bit_count() == 1
+        return n > 0 and n.bit_count() == 1
 
 
 s = Solution()
